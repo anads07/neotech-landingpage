@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url('../images/fundo.png') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+    font-size: 1.3rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    position: relative;
+}
+
+nav ul li a.active {
+    color: white;
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #097a6c;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+}
+
+.divider {
+    height: 4px;
+    background-color: white;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 70px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    padding: 50px 30px;
+}
+
+.content {
+    width: 50%;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+.btn {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-size: 1.1rem;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.image-container {
+    width: 45%;
+    position: relative;
+    perspective: 1000px;
+}
+
+#ia-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .content, .image-container {
+        width: 100%;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    p {
+        max-width: 100%;
+    }
+    
+    .image-container {
+        margin-top: 30px;
+    }
+}
